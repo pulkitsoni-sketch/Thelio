@@ -718,6 +718,192 @@ with BuildPart() as part:
         make_face()
 
     extrude(amount=-1.6, mode=Mode.SUBTRACT)
+
+# ---------------------------------------------------------
+    # Feature: 22 Subtractive Line Profiles
+    #          (YZ Plane at X=1.6, extrude to X=0)
+    # ---------------------------------------------------------
+    with BuildSketch(Plane.YZ.offset(1.6)):
+
+        # ── P1: triangle ───────────────────────────────────────
+        with BuildLine():
+            Polyline([(315.48, 334.658), (316.73, 332.493),
+                      (314.23, 332.493)], close=True)
+        make_face()
+
+        # ── P2: hexagon ────────────────────────────────────────
+        with BuildLine():
+            Polyline([(315.48, 330.493), (316.73, 329.772),
+                      (316.73, 328.328), (315.48, 327.607),
+                      (314.23, 328.328), (314.23, 329.772)], close=True)
+        make_face()
+
+        # ── P3: rectangle ──────────────────────────────────────
+        with BuildLine():
+            Polyline([(316.73, 325.607), (316.73, 323.107),
+                      (314.23, 323.107), (314.23, 325.607)], close=True)
+        make_face()
+
+        # ── P4: triangle ───────────────────────────────────────
+        with BuildLine():
+            Polyline([(338.34, 177.178), (339.59, 175.013),
+                      (337.09, 175.013)], close=True)
+        make_face()
+
+        # ── P5: hexagon ────────────────────────────────────────
+        with BuildLine():
+            Polyline([(338.34, 173.013), (339.59, 172.292),
+                      (339.59, 170.848), (338.34, 170.127),
+                      (337.09, 170.848), (337.09, 172.292)], close=True)
+        make_face()
+
+        # ── P6: rectangle ──────────────────────────────────────
+        with BuildLine():
+            Polyline([(339.59, 168.127), (339.59, 165.627),
+                      (337.09, 165.627), (337.09, 168.127)], close=True)
+        make_face()
+
+        # ── P7: rectangle ──────────────────────────────────────
+        with BuildLine():
+            Polyline([(339.59, 127.1),   (339.59, 124.6),
+                      (337.09, 124.6),   (337.09, 127.1)], close=True)
+        make_face()
+
+        # ── P8: triangle ───────────────────────────────────────
+        with BuildLine():
+            Polyline([(338.34, 48.193),  (339.59, 46.027),
+                      (337.09, 46.027)], close=True)
+        make_face()
+
+        # ── P9: triangle ───────────────────────────────────────
+        with BuildLine():
+            Polyline([(183.4,  334.658), (184.65, 332.493),
+                      (182.15, 332.493)], close=True)
+        make_face()
+
+        # ── P10: hexagon ───────────────────────────────────────
+        with BuildLine():
+            Polyline([(183.4,  330.493), (184.65, 329.772),
+                      (184.65, 328.328), (183.4,  327.607),
+                      (182.15, 328.328), (182.15, 329.772)], close=True)
+        make_face()
+
+        # ── P11: rectangle ─────────────────────────────────────
+        with BuildLine():
+            Polyline([(184.65, 325.607), (184.65, 323.107),
+                      (182.15, 323.107), (182.15, 325.607)], close=True)
+        make_face()
+
+        # ── P12: triangle ──────────────────────────────────────
+        with BuildLine():
+            Polyline([(183.4,  177.178), (184.65, 175.013),
+                      (182.15, 175.013)], close=True)
+        make_face()
+
+        # ── P13: hexagon ───────────────────────────────────────
+        with BuildLine():
+            Polyline([(183.4,  173.013), (184.65, 172.292),
+                      (184.65, 170.848), (183.4,  170.127),
+                      (182.15, 170.848), (182.15, 172.292)], close=True)
+        make_face()
+
+        # ── P14: rectangle ─────────────────────────────────────
+        with BuildLine():
+            Polyline([(184.65, 168.127), (184.65, 165.627),
+                      (182.15, 165.627), (182.15, 168.127)], close=True)
+        make_face()
+
+        # ── P15: rectangle ─────────────────────────────────────
+        with BuildLine():
+            Polyline([(191.15, 132.35),  (191.15, 129.85),
+                      (188.65, 129.85),  (188.65, 132.35)], close=True)
+        make_face()
+
+        # ── P16: rectangle ─────────────────────────────────────
+        with BuildLine():
+            Polyline([(184.65, 106.78),  (184.65, 104.28),
+                      (182.15, 104.28),  (182.15, 106.78)], close=True)
+        make_face()
+
+        # ── P17: triangle ──────────────────────────────────────
+        with BuildLine():
+            Polyline([(183.4,  48.193),  (184.65, 46.027),
+                      (182.15, 46.027)], close=True)
+        make_face()
+
+        # ── P18: triangle ──────────────────────────────────────
+        with BuildLine():
+            Polyline([(124.01, 332.215), (125.26, 330.05),
+                      (122.76, 330.05)], close=True)
+        make_face()
+
+        # ── P19: rectangle ─────────────────────────────────────
+        with BuildLine():
+            Polyline([(125.26, 328.05),  (125.26, 325.55),
+                      (122.76, 325.55),  (122.76, 328.05)], close=True)
+        make_face()
+
+        # ── P20: triangle ──────────────────────────────────────
+        with BuildLine():
+            Polyline([(124.01, 174.735), (125.26, 172.57),
+                      (122.76, 172.57)], close=True)
+        make_face()
+
+        # ── P21: rectangle ─────────────────────────────────────
+        with BuildLine():
+            Polyline([(125.26, 170.57),  (125.26, 168.07),
+                      (122.76, 168.07),  (122.76, 170.57)], close=True)
+        make_face()
+
+        # ── P22: triangle ──────────────────────────────────────
+        with BuildLine():
+            Polyline([(111.01, 48.193),  (112.26, 46.027),
+                      (109.76, 46.027)], close=True)
+        make_face()
+
+    extrude(amount=-1.6, mode=Mode.SUBTRACT)
+
+# ---------------------------------------------------------
+    # Feature: 22 Subtractive Circles dia=4.35mm
+    #          (YZ Plane at X=1.6, extrude to X=0)
+    # ---------------------------------------------------------
+    with BuildSketch(Plane.YZ.offset(1.6)):
+        with Locations((344.74,  171.47)): Circle(radius=2.175)   # 1
+        with Locations((349.40,  154.40)): Circle(radius=2.175)   # 2
+        with Locations((344.74,  125.75)): Circle(radius=2.175)   # 3
+        with Locations((349.40,   54.40)): Circle(radius=2.175)   # 4
+        with Locations((344.74,   47.01)): Circle(radius=2.175)   # 5
+        with Locations((321.88,  328.95)): Circle(radius=2.175)   # 6
+        with Locations((291.478, 291.00)): Circle(radius=2.175)   # 7
+        with Locations((291.478, 205.00)): Circle(radius=2.175)   # 8
+        with Locations((251.478, 330.658)):Circle(radius=2.175)   # 9
+        with Locations((251.478, 180.658)):Circle(radius=2.175)   # 10
+        with Locations((189.80,  328.95)): Circle(radius=2.175)   # 11
+        with Locations((189.80,  171.47)): Circle(radius=2.175)   # 12
+        with Locations((189.80,  125.75)): Circle(radius=2.175)   # 13
+        with Locations((189.80,  105.43)): Circle(radius=2.175)   # 14
+        with Locations((189.80,   47.01)): Circle(radius=2.175)   # 15
+        with Locations((117.41,  328.95)): Circle(radius=2.175)   # 16
+        with Locations((117.41,  171.47)): Circle(radius=2.175)   # 17
+        with Locations((117.41,   47.01)): Circle(radius=2.175)   # 18
+        with Locations(( 88.60,  327.00)): Circle(radius=2.175)   # 19
+        with Locations(( 70.60,  302.00)): Circle(radius=2.175)   # 20
+        with Locations(( 60.20,  208.70)): Circle(radius=2.175)   # 21
+        with Locations(( 42.20,  183.70)): Circle(radius=2.175)   # 22
+    extrude(amount=-1.6, mode=Mode.SUBTRACT)
+
+# ---------------------------------------------------------
+    # Feature: 6 Subtractive Circles dia=3.45mm
+    #          (YZ Plane at X=1.6, extrude to X=0)
+    # ---------------------------------------------------------
+    with BuildSketch(Plane.YZ.offset(1.6)):
+        with Locations((334.20, 182.223)): Circle(radius=1.725)   # 1
+        with Locations((348.20, 335.423)): Circle(radius=1.725)   # 2
+        with Locations((131.00, 372.55)):  Circle(radius=1.725)   # 3
+        with Locations(( 43.00, 372.55)):  Circle(radius=1.725)   # 4
+        with Locations((  6.80, 348.30)):  Circle(radius=1.725)   # 5
+        with Locations((  6.80, 278.30)):  Circle(radius=1.725)   # 6
+    extrude(amount=-1.6, mode=Mode.SUBTRACT)
     
 from ocp_vscode import show
 show(part)
